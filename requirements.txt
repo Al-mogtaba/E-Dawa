@@ -7,3 +7,9 @@ django-google-maps==0.13.0
 django-location-field==2.1.0
 django-map-widgets==0.3.3
 
+dj-database-url
+django-heroku
+gunicorn
+psycopg2
+python-decouple
+whitenoise

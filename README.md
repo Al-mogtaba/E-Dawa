@@ -12,7 +12,7 @@
 6. **CONGRATULATIONS** !! the website now run in your PC
 
 ## Access Admin Panel 
- * go to _http://127.0.0.1:8000/admin/_ using browser navagition bar
+ * go to _http://127.0.0.1:8000/admin/_ using browser
  * the defalut Username : acer , and Password : admin1 (YOU CAN CHANGE IT AFTER LOGIN INTO ADMIN PANEL)
  * You can add anthoer admin useing admin panel OR run __python manage.py createsuper__ user command
 

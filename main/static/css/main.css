@@ -1,0 +1,78 @@
+/* mainfont */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300&display=swap');
+ /* brandfont */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* subtitlefont */
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap');
+
+*, body{
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+nav .logo {
+  font-size: xx-large;
+  font-family: 'Righteous', cursive;
+}
+nav .logo span{
+  color: darkorange;
+  font-size: xx-large;
+  font-family: 'Righteous', cursive;
+}
+nav ul{
+  font-weight: 900;
+  font-size: large;
+  margin-left: 3%;
+}
+section .myself{
+  text-align:justify;
+  word-spacing: 3px;
+}
+
+section .myself img{
+  width: 40%;
+}
+section .myself h1 small{
+  font-size: x-large;
+}
+
+section .myself h1 span{
+  color: darkorange;
+  font-family: 'Righteous', cursive;
+}
+
+section .sk-icon img{
+  width: 70px;
+  height: 70px;
+}
+
+section .goal h2{
+  color: darkorange;
+  font-size: xx-large;
+  font-family: 'Changa', sans-serif;
+  
+}
+
+section .Sub-Title h2{
+  color: darkorange;
+  font-size: xx-large;
+  font-family: 'Changa', sans-serif;
+  
+}
+footer p span{
+  color: darkorange;
+  font-size: x-large;
+  font-family: 'Righteous', cursive;
+}
+footer p{
+  color:ghostwhite;
+}
+footer{
+  z-index: 999;
+    margin: auto;
+}
+
+
+

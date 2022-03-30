@@ -1,0 +1,47 @@
+{% extends 'dashboard/base_template.html' %}
+{% load crispy_forms_tags %}
+{% block page_title %}
+   {{user.username}}
+{% endblock page_title %}
+
+
+{% block main_content %}
+
+{% load static %}
+
+<section class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">معلومات الصيدلية</h3>
+                    </div>
+                     
+                    <form role="form" method="POST" enctype='multipart/form-data'>
+                        {% csrf_token %}
+                       
+                        <div class="card-body">
+                            <div class="form-group">
+                               {{ form|crispy }}
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">تحديث</button>
+                        </div>
+                        
+                    </form>
+                    </div>
+                    <!-- /.card -->
+
+                </div>
+            </div>
+
+        </div><!-- /.container-fluid -->
+      </section>
+
+  {% endblock main_content %}

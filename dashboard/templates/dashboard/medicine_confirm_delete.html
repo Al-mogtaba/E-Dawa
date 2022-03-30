@@ -1,0 +1,38 @@
+{% extends 'dashboard/base_template.html' %}
+
+{% block page_title %}
+حذف عنصر
+{% endblock page_title %}
+
+{% block main_content %}
+
+{% load static %}
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <a href="{% url 'item_list' %}" class="card-title">العودة</a>
+                        </div>
+                        <form role="form" method="POST" enctype='multipart/form-data'>
+                            {% csrf_token %}
+    
+                            <div class="card-body">
+                                <div class="form-group">
+                                </div>
+                            </div>
+                                <h3>هل تريد حذف  "{{object}}"</h3>
+
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-outline-danger">تأكيد </button>
+                                <a class="btn btn-outline-secondary" href="{% url 'item_list'%}">تراجع</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock main_content %}

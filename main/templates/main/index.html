@@ -1,0 +1,189 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block body %}
+
+  <section dir="auto" id="home"
+    Class="has-bg-img bg-purple bg-blend-overlayg bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+    <div class="container ">
+      <div class="myself d-sm-flex align-items-center justify-content-between">
+        <div>
+          <h1><small>مرحبا عزيزي ...</small><br><span> E-Dawa الان في خدمتك :) </span></h1>
+          <p class="lead my-4">
+            يمكنك الان العثور على جميع احتياجاتك الدوائية في مكان واحد , كما يمكنك طلب جميع الادوية التي تريد.
+          </p>
+          <button Class="btn btn-primary btn-lg m-3" Data-bs-toggle="modal" Data-bs-target="#enroll">
+            أعرف المزيد
+          </button>
+
+        </div>
+        <img Class="img-fluid w-10 d-none d-sm-block images" Src="{% static '/img/chemey.png'%}" Alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section id="Services" class="p-5 bg-dark text-light">
+    <div class="Sub-Title container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md">
+          <img src="{% static '/img/services.png'%}" class="img-fluid mx-auto d-none d-md-block" alt="" />
+        </div>
+        <div class="goal col-md p-5">
+          <h2 dir="auto" class="text-center">هدفنا</h2>
+          <p>و سأعرض مثال حي لهذا، من منا لم يتحمل جهد بدني شاق إلا من أجل الحصول على ميزة أو فائدة؟ ولكن من لديه الحق
+            أن ينتقد شخص ما أراد أن يشعر بالسعادة التي لا تشوبها عواقب أليمة أو آخر أراد أن يتجنب الألم الذي ربما تنجم
+            عنه بعض المتعة ؟
+            علي الجانب الآخر نشجب ونستنكر هؤلاء الرجال المفتونون بنشوة اللحظة الهائمون في رغباتهم فلا يدركون ما يعقبها
+            من الألم والأسي المحتم، واللوم كذلك يشمل هؤلاء الذين أخفقوا في واجباتهم نتيجة لضعف إرادتهم فيتساوي مع هؤلاء
+            الذين يتجنبون وينأون عن تحمل الكدح والألم .
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section dir="auto" id="Skills" class="p-5 bg-dark">
+    <div class="Sub-Title container">
+      <h2 class="text-center">ماذا نقدم ؟</h2>
+      <p class="lead text-center text-light mb-5">
+        اليكم بعض الخدمات التي نوفرها لكم
+      </p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-primary">
+            <div class="sk-icon card-body text-center">
+              <img Src="{% static 'img/icone1.jpg' %}" Class="rounded-circle mb-3" Alt="" />
+              <h3 class="card-title text-warning mb-3">شراء<br>الأدوية</h3>
+              <p class="card-text text-white">
+                و سأعرض مثال حي لهذا، من منا لم يتحمل جهد بدني شاق إلا من أجل الحصول على ميزة أو فائدة؟ ولكن من لديه
+                الحق أن ينتقد شخص ما أراد أن يشعر بالسعادة التي لا تشوبها عواقب أليمة أو آخر أراد أن يتجنب الألم الذي
+                ربما
+                تنجم
+                عنه بعض
+                المتعة ؟
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-secondary">
+            <div class="sk-icon card-body text-center">
+              <img Src="{% static 'img/icone4.jpg' %}" Class="rounded-circle mb-3" Alt="" />
+              <h3 class="card-title text-warning mb-3">اماكن ألادوية <br>النادرة</h3>
+              <p class="card-text text-white">
+                و سأعرض مثال حي لهذا، من منا لم يتحمل جهد بدني شاق إلا من أجل الحصول على ميزة أو فائدة؟ ولكن من لديه
+                الحق
+                أن ينتقد شخص ما أراد أن يشعر بالسعادة التي لا تشوبها عواقب أليمة أو آخر أراد أن يتجنب الألم الذي ربما
+                تنجم
+                عنه بعض المتعة ؟
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-primary">
+            <div class="sk-icon card-body text-center">
+              <img Src="{% static 'img/icone2.jpg' %}" Class="rounded-circle mb-3" Alt="" />
+              <h3 class="card-title text-warning mb-3">طلب أدوية<br> من الخارج</h3>
+              <p class="card-text text-white">
+                و سأعرض مثال حي لهذا، من منا لم يتحمل جهد بدني شاق إلا من أجل الحصول على ميزة أو فائدة؟ ولكن من لديه
+                الحق
+                أن ينتقد شخص ما أراد أن يشعر بالسعادة التي لا تشوبها عواقب أليمة أو آخر أراد أن يتجنب الألم الذي ربما
+                تنجم
+                عنه بعض المتعة ؟
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-secondary">
+            <div class="sk-icon card-body text-center">
+              <img Src="{% static 'img/icone3.jpg' %}" Class="rounded-circle mb-3" Alt="" />
+              <h3 class="card-title mb-3 text-warning">توفير المعدات <br>الطبية</h3>
+              <p class="card-text text-white">
+                و سأعرض مثال حي لهذا، من منا لم يتحمل جهد بدني شاق إلا من أجل الحصول على ميزة أو فائدة؟ ولكن من لديه
+                الحق
+                أن ينتقد شخص ما أراد أن يشعر بالسعادة التي لا تشوبها عواقب أليمة أو آخر أراد أن يتجنب الألم الذي ربما
+                تنجم
+                عنه بعض المتعة ؟
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="Projects" class="p-5 bg-dark">
+    <div class="Sub-Title container">
+      <h2 class="text-center">مواضيع صحية</h2>
+      <p class="lead text-center text-light mb-5">
+        اليكم بعض المقالات العلمية في مجال الصحة
+      </p>
+      <div class="row text-center g-4">
+        <div class="col-md">
+          <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h3 class="card-title mb-3">الموضوع الاول</h3>
+              <p class="card-text">
+                و سأعرض مثال حي لهذا، من منا لم يتحمل جهد بدني شاق إلا من أجل الحصول على ميزة أو فائدة؟ ولكن من لديه
+                الحق
+                أن ينتقد شخص ما أراد أن يشعر بالسعادة التي لا تشوبها عواقب أليمة أو آخر أراد أن يتجنب الألم الذي ربما
+                تنجم
+                عنه بعض المتعة ؟
+              </p>
+              <a href="#" class="btn btn-light">اقرأ المزيد</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card bg-secondary text-light">
+            <div class="card-body text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-person-square"></i>
+              </div>
+              <h3 class="card-title mb-3">الموضوع الثاني</h3>
+              <p class="card-text">
+                و سأعرض مثال حي لهذا، من منا لم يتحمل جهد بدني شاق إلا من أجل الحصول على ميزة أو فائدة؟ ولكن من لديه
+                الحق
+                أن ينتقد شخص ما أراد أن يشعر بالسعادة التي لا تشوبها عواقب أليمة أو آخر أراد أن يتجنب الألم الذي ربما
+                تنجم
+                عنه بعض المتعة ؟
+              </p>
+              <a href="#" class="btn btn-light">اقرأ المزيد</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3 class="card-title mb-3">الموضوع الثالث</h3>
+              <p class="card-text">
+                و سأعرض مثال حي لهذا، من منا لم يتحمل جهد بدني شاق إلا من أجل الحصول على ميزة أو فائدة؟ ولكن من لديه
+                الحق
+                أن ينتقد شخص ما أراد أن يشعر بالسعادة التي لا تشوبها عواقب أليمة أو آخر أراد أن يتجنب الألم الذي ربما
+                تنجم
+                عنه بعض المتعة ؟
+              </p>
+              <a href="#" class="btn btn-light">اقرأ المزيد</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+

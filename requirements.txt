@@ -1,0 +1,9 @@
+crispy-bootstrap5==0.6
+dj-places==5.1.0
+Django==4.0.2
+django-crispy-forms==1.14.0
+django-filter==21.1
+django-google-maps==0.13.0
+django-location-field==2.1.0
+django-map-widgets==0.3.3
+

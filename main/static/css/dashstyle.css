@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+aside .logo{
+    font-size: xx-large;
+    font-family: 'Righteous', cursive;
+    margin-left: 25px;
+    color: aliceblue;
+}
+aside .logo span{
+    color: darkorange;
+    font-size: xx-large;
+    font-family: 'Righteous', cursive;
+}

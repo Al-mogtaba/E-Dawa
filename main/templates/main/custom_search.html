@@ -1,0 +1,80 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block body %}
+  <section dir="auto" id="home" Class="bg-dark text-light  pb-5 text-sm-start">
+    <div class="row justify-content-center">
+      <div class="col-md-7 col-lg-5">
+        <form class="row g-3 p-4 text-center">
+          <div class="form-group mt-3">
+            {{myFilter.form|crispy}}
+            
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">بحث</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <section dir="rtl" Class="bg-dark text-light  text-sm-start">
+    <div class="container  text-center table-responsive">
+
+          
+          <table class="table table-bordered align-middle text-light table-sm ">
+            <thead class="thead-light">
+                <tr>
+                  <th scope="col">رقم المنتج</th>
+                  <th scope="col">الاسم العلمي</th>
+                  <th scope="col">اسم الشركة المصنعة</th>
+                  <th scope="col">اسم الصيدلية</th>
+                  <th scope="col">موقع الصيدلية</th>
+                  <th scope="col">رقم التواصل</th>
+                  <th scope="col">الموقع على خرائط جوجل</th>
+      
+                </tr>
+            </thead>
+            <tbody class="text-center text-light">
+              {% for info in medicines %}
+                  <tr>
+                    <div class=" text-wrap ">
+                      <th scope="row">{{info.id}}</th>
+                    </div>
+                    <div class=" text-wrap ">
+                      <th scope="row">{{info.medicine_name}}</th>
+                    </div><div class=" text-wrap ">
+                      <th scope="row">{{info.comapny}}</th>
+                    </div><div class=" text-wrap ">
+                      <th scope="row">{{info.owner.pharmacy_name}}</th>
+                    </div><div class=" text-wrap ">
+                      <th scope="row">{{info.owner.location}}</th>
+                    </div><div class=" text-wrap ">
+                      <th scope="row">{{info.owner.phone_number}}</th>
+                    </div>
+                    
+                  <div class="">
+                      <td class="fw-lighter" scope="row">
+                        <!-- <button type="button" class="btn btn-outline-light btn-sm"> -->
+                        <a href="{{info.owner.google_map_link}}" class="btn btn-outline-light btn-sm">الذهاب</a>
+                        <!-- </button> -->
+                      </td>
+                    </div> 
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+        {% comment %} {% else %}
+            <div>
+              <h1>لا توجد بيانات</h1>
+            </div>
+        {% endif %} {% endcomment %}
+      
+                    
+    </div>
+  </section>
+
+{% endblock %}

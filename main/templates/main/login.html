@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block body %}
+ 
+<div dir='rtl' class="form-content my-3 p-3 text-dark">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="card shadow-lg border-0 rounded-lg mt-0 mb-5">
+                    <div class="card-header justify-content-center">
+                        <h3 class="font-weight-light my-4 text-center">تسجيل الدخول</h3>
+                    </div>
+                    <div class="card-body text-dark">
+                        <form method="POST">
+                            {% csrf_token %}
+                            
+                    <div class="row">
+                        <div class="col  m-1">
+                            {{ form|crispy }}
+                        </div>
+
+
+                    <div class="form-group m-4">
+                        {% comment %} <div class="text-center">
+                            <label class="checkbox-wrap checkbox-primary mb-2">
+                                تذكرني
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span>
+                            </label>
+                            
+                        </div> {% endcomment %}
+                        <div class="form-group col   m-3">
+                            <button type="submit" class="form-control btn btn-dark rounded submit">
+                                دخول
+                            </button>
+                        </div>
+                    </div>
+                    <a class="link-danger text-center " href="#">نسيت كلمة المرور ؟</a>
+                    <p class="text-center ">ليس لديك حساب بعد ؟ <a class="text-warning" data-toggle="tab" href="{% url 'register' %}">الإشتراك</a></p>
+            </div>
+        </div>
+    </div>
+    
+</section>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'dashboard/base_template.html' %}
+
+{% block main_content %}
+
+{% load static %}
+
+    <section class="content">
+        <div class="container-fluid">
+            <div dir='rtl' class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">تفاصيل المنتجات</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body table-responsive p-0">
+                        <table class="table table-hover text-nowrap">
+                        <thead>
+                            <tr>
+                                <th>رقم المنتج</th>
+                                <th>الاسم العلمي</th>
+                                <th>اسم الشركة المصنعة</th>
+                                <th>اسم الصيدلية</th>
+                                <th>موقع الصيدلية</th>
+                                <th>رقم التواصل</th>
+                                <th>الموقع على خرائط جوجل</th>
+                                <th>تعديل\حذف</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in info %}
+                                {% if item.owner.user.id == user.id%}
+                                        <tr>
+                                            <td>{{item.id}}</td>
+                                            <td>{{item.medicine_name}}</td>
+                                            <td>{{item.comapny}}</td>
+                                            <td>{{item.owner.pharmacy_name}}</td>
+                                            <td>{{item.owner.location}}</td>
+                                            <td>{{item.owner.phone_number}}</td>
+                                            <td>{{item.owner.google_map_link}}</td>       
+                                            <td>
+                                                <a href="{% url 'edit_item' item.id %}" class="btn btn-success">Edit</a> 
+                                                <a href="{% url 'delete_item' item.id %}" class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+{% endblock main_content %}

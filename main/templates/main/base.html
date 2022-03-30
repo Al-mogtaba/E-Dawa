@@ -1,0 +1,76 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ar">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static '/css/main.css' %}">
+  <script src="https://kit.fontawesome.com/5251050933.js" crossorigin="anonymous"></script>
+  <title>E-Dawa</title>
+</head>
+
+<body class="bg-dark text-light">
+  <header class="bg-dark text-light">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark  mx-2">
+        <a class="navbar-brand logo" href="{% url 'home' %}"><span>E-</span>Dawa</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">الرئيسية</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                الخدمات
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                <li><a class="dropdown-item" href="{% url 'custom_search' %}">بحث مخصص </a></li>
+                <li><a class="dropdown-item" href="{% url 'medicin_request' %}">طلب توفير دواء</a></li>
+                         
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="{% url 'register' %}"> الانضمام للموقع</a></li>          
+                <li><a class="dropdown-item" href="{% url 'login' %}"> تسجيل الدخول</a></li> 
+              </ul>
+            </li>
+
+          </ul>
+          <form class="d-flex" method="POST" action="{% url 'search' %}">
+            {% csrf_token %}
+
+            <input name="searched" class="form-control me-2" type="search" placeholder="ابحث عن دواء" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">بحث</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </header>
+  {% if messages %}
+    {% for message in messages %}
+      <div class="text-center alert alert-{{ message.tags }}"> 
+        {{message}}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  {% block body%}
+  {% endblock %}
+  
+  <footer id="footer" class="bg-dark text-center position-relative p-1 text-center">
+    <p class="lead ">Copyright &copy; 2022 | <span>E-Dawa</span> Services</p>
+  </footer>
+  <script src="{% static '/js/main.js' %}"></script>
+  <script src="{% static '/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
